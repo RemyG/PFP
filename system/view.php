@@ -20,8 +20,10 @@ class View {
 		extract($this->pageVars);
 
 		ob_start();
-		require($this->template);
+		include APP_DIR.'views/header.php';
+		require($this->template);		
 		echo ob_get_clean();
+		include APP_DIR.'views/footer.php';
 	}
     
 }

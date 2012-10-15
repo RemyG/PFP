@@ -2,10 +2,9 @@
 
 function pip()
 {
-	global $config;
     
     // Set our defaults
-    $controller = $config['default_controller'];
+    $controller = DEFAULT_CONTROLLER;
     $action = 'index';
     $url = '';
 	
@@ -28,13 +27,13 @@ function pip()
 	if(file_exists($path)){
         require_once($path);
 	} else {
-        $controller = $config['error_controller'];
+        $controller = ERROR_CONTROLLER;
         require_once(APP_DIR . 'controllers/' . $controller . '.php');
 	}
     
     // Check the action exists
     if(!method_exists($controller, $action)){
-        $controller = $config['error_controller'];
+        $controller = ERROR_CONTROLLER;
         require_once(APP_DIR . 'controllers/' . $controller . '.php');
         $action = 'index';
     }

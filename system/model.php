@@ -6,21 +6,7 @@ class Model {
 
 	public function __construct()
 	{
-		global $config;
-		
-		$this->connection = mysql_pconnect($config['db_host'], $config['db_username'], $config['db_password']) or die('MySQL Error: '. mysql_error());
-		mysql_select_db($config['db_name'], $this->connection);
-	}
-
-	public function escapeString($string)
-	{
-		return mysql_real_escape_string($string);
-	}
-
-	public function escapeArray($array)
-	{
-	    array_walk_recursive($array, create_function('&$v', '$v = mysql_real_escape_string($v);'));
-		return $array;
+		$this->connection = PDO2::getInstance();
 	}
 	
 	public function to_bool($val)
@@ -41,22 +27,22 @@ class Model {
 	public function to_datetime($val)
 	{
 	    return date('Y-m-d H:i:s', $val);
-	}
-	
-	public function query($qry)
-	{
-		$result = mysql_query($qry) or die('MySQL Error: '. mysql_error());
-		$resultObjects = array();
+	}	
 
-		while($row = mysql_fetch_object($result)) $resultObjects[] = $row;
-
-		return $resultObjects;
+	public function prepareStatement($sql) {
+		return $this->connection->prepare($sql);
 	}
 
-	public function execute($qry)
-	{
-		$exec = mysql_query($qry) or die('MySQL Error: '. mysql_error());
-		return $exec;
+	public function executeStatement($statement, $parameters = null) {
+		
+		if($parameters != null) {
+			$statement->execute($parameters);
+		} else {
+			$statement->execute();
+		}		
+		$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+
 	}
     
 }

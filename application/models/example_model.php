@@ -4,8 +4,8 @@ class Example_model extends Model {
 	
 	public function getSomething($id)
 	{
-		$id = $this->escapeString($id);
-		$result = $this->query('SELECT * FROM something WHERE id="'. $id .'"');
+		$stmt = $this->prepareStatement('SELECT * FROM something WHERE id= ? ');
+		$result = $this->executeStatement($stmt, array($id));
 		return $result;
 	}
 

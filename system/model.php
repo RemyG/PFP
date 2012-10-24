@@ -44,6 +44,28 @@ class Model {
 		return $result;
 
 	}
+
+	public function executeStatementUpdate($statement, $parameters = null) {
+		
+		if($parameters != null) {
+			$statement->execute($parameters);
+		} else {
+			$statement->execute();
+		}		
+		$result = $statement->rowCount();
+		return $result;
+
+	}
+
+	public function executeStatementInsert($statement, $parameters = null) {
+		if($parameters != null) {
+			$statement->execute($parameters);
+		} else {
+			$statement->execute();
+		}		
+		$result = $this->connection->lastInsertId();
+		return $result;
+	}
     
 }
 ?>

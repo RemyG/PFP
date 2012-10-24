@@ -1,6 +1,6 @@
 <?php
 
-function pip()
+function pfp()
 {
     
     // Set our defaults

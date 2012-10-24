@@ -16,8 +16,8 @@ require(ROOT_DIR .'system/pdo2.php');
 require(ROOT_DIR .'system/model.php');
 require(ROOT_DIR .'system/view.php');
 require(ROOT_DIR .'system/controller.php');
-require(ROOT_DIR .'system/pip.php');
+require(ROOT_DIR .'system/pfp.php');
 
-pip();
+pfp();
 
 ?>

@@ -2,7 +2,7 @@
 
 PFP is a tiny application framework built for people who use a LAMP stack. PFP aims to be as simple as possible to set up and use.
 
-Visit [http://remyg.github.com/PFP/](http://remyg.github.com/PFP/) for more information and documentation.
+Visit [http://github.remyg.fr/projects/pfp/](http://github.remyg.fr/projects/pfp/) for more information and documentation.
 
 ## Requirements
 
@@ -18,7 +18,7 @@ Visit [http://remyg.github.com/PFP/](http://remyg.github.com/PFP/) for more info
 
 ## Documentation
 
-Visit [http://remyg.github.com/PFP/](http://remyg.github.com/PFP/) to see the documentation.
+Visit [http://github.remyg.fr/projects/pfp/](http://github.remyg.fr/projects/pfp/) to see the documentation.
 
 ## License
 

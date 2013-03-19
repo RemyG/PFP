@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * View class
+ *
+ * @author RemyG
+ * @license MIT
+ */
 class View {
 
 	private $pageVars = array();
@@ -18,14 +24,12 @@ class View {
 	public function render()
 	{
 		extract($this->pageVars);
-
 		ob_start();
 		include APP_DIR.'views/header.php';
-		require($this->template);		
-		echo ob_get_clean();
+		require($this->template);
 		include APP_DIR.'views/footer.php';
-	}
-    
+		echo ob_get_clean();		
+	}    
 }
 
 ?>

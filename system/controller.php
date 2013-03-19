@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Controller class
+ *
+ * @author RemyG
+ * @license MIT
+ */
 class Controller {
 	
 	public function loadModel($name)

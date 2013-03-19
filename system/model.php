@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Model class
+ *
+ * @author RemyG
+ * @license MIT
+ */
 class Model {
 
 	private $connection;
@@ -33,8 +39,8 @@ class Model {
 		return $this->connection->prepare($sql);
 	}
 
-	public function executeStatement($statement, $parameters = null) {
-		
+	public function executeStatement($statement, $parameters = null)
+	{
 		if($parameters != null) {
 			$statement->execute($parameters);
 		} else {
@@ -45,8 +51,8 @@ class Model {
 
 	}
 
-	public function executeStatementUpdate($statement, $parameters = null) {
-		
+	public function executeStatementUpdate($statement, $parameters = null)
+	{
 		if($parameters != null) {
 			$statement->execute($parameters);
 		} else {
@@ -57,7 +63,8 @@ class Model {
 
 	}
 
-	public function executeStatementInsert($statement, $parameters = null) {
+	public function executeStatementInsert($statement, $parameters = null)
+	{
 		if($parameters != null) {
 			$statement->execute($parameters);
 		} else {

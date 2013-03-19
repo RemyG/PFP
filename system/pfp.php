@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Main class
+ *
+ * @author RemyG
+ * @license MIT
+ */
 function pfp()
 {
     

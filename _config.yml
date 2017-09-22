@@ -1,1 +1,14 @@
-theme: jekyll-theme-slate
+highlighter: rouge
+
+permalink: :year/:month/:day/:title 
+
+baseurl: /PFP
+
+title : PFP
+author :
+  name : Rémy Gardette
+  website: http://remyg.fr
+  email : remy.gardette@gmail.com
+  github : RemyG
+  twitter : remygardette
+  feedburner : feedname

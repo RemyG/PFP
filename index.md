@@ -3,11 +3,10 @@ layout: page
 title: PFP
 ---
 
-# {{ page.title }}
-
 <div class="grid-container">
 	<div class="grid-100 main-description">
-		
+		<p>PFP is a tiny PHP application framework built for people who use a LAMP stack. PFP aims to be as simple as possible to set up and use.</p>
+		<p>This version is a fork of the original PIP project by <a href="http://gilbert.pellegrom.me/">Gilbert Pellegrom</a>. You can find the original project at <a href="https://github.com/gilbitron/PIP/">https://github.com/gilbitron/PIP/</a>.</p>
 	</div>
 </div>
 
